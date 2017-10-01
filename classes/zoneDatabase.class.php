@@ -5,6 +5,9 @@ class zoneDatabase {
 
 	/*
 		The Zone database
+		
+		REGNR => WEEKDAY => debit_start_time, debit_stop_time, rate, rate_unit, max_debit, extended_rates => duration_for_rate, rate
+
 	*/
         private $database = array(
                 "1234" => array(

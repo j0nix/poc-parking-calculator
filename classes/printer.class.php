@@ -35,7 +35,7 @@ class printer {
 
 			foreach ($customer['billing'] as $billing_row) {
 
-				printf("\n\t[ZONE %s] Parked between %s and %s \n",$billing_row['zone'],$billing_row['start'], $billing_row['stop']);
+				printf("\n\n\t[ZONE %s] Parked between %s and %s \n",$billing_row['zone'],$billing_row['start'], $billing_row['stop']);
 				foreach($billing_row['debits'] as $debit_row) {
 					printf("\n\t\t* %s - %s , debit: %.2f :-\n",unixTime::unix2human($debit_row['start']),unixTime::unix2human($debit_row['stop']),$debit_row['debit']); 
 				}
