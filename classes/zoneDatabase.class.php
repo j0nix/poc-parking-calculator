@@ -27,7 +27,7 @@ class zoneDatabase {
                 )
         );
 
-	public function __construct($zoneId=null) {A
+	public function __construct($zoneId=null) {
 		/* 
 			If we include a zone reference we try to set variable zone_data 
 		*/
