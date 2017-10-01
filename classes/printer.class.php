@@ -1,20 +1,30 @@
 <?php
 
+//Printer "tool"
 class printer {
 
-	private $data = array();
+	private $data = array();	// Stores data we like to print
 
-        private function __construct($print) {
+	private function __construct($print=null) {
+		/*
+			Just make sure we included arraysdata to print
+		*/
 		if(is_array($print)) {
                 	$this->data = $print;
                 }
 	}
 
+	/*
+		separator/header when printing data as text
+	*/
 	private function separator($regnr,$customer) {
 		$tmp = '';for($x=0;$x<100;$x++) { $tmp .="-"; }
 		print ("\n\n   $tmp\n   $regnr $customer\n   $tmp");
 	}
 
+	/*
+		Print your data formated as defined in function
+	*/
 	public static function text($debitData) {
 
 		$printer = new self($debitData);
@@ -33,6 +43,9 @@ class printer {
 		}
 	}
 
+	/*
+		print data as prettyprint json
+	*/
 	public static function json($debitData) {
 
 		header('Content-Type: application/json; charset=utf-8');

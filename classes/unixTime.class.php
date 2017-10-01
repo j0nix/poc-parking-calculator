@@ -1,5 +1,9 @@
 <?php
-/* Transform DateTime objects */
+/* 
+	Helper functions for transform Date Time objects
+ 
+ */
+
 class unixTime extends DateTime {
 
     	private function getEpoch($dtm) {
@@ -14,13 +18,15 @@ class unixTime extends DateTime {
         	} else throw new UnexpectedValueException(sprintf("%s::%s::Invalid DateTime %s",__CLASS__,__FUNCTION__,$epoch));
     	}
 
-    	/* static functions */
 
+	/* 
+		Transform a timestamp to epoch/unixtime 
+	*/
     	public static function human2unix($timestamp) { $dtm = new self($timestamp); return $dtm->getEpoch($dtm); } 
-	/* Transform a timestamp to epoch/unixtime */
 
-
+	/*
+		Transform a unix/epoch timestamp to ISO8601:ish 
+	*/
 	public static function unix2human($timestamp) { $dtm = new self("@$timestamp"); return $dtm->getHuman($dtm); } 
-	/* Transform a unix/epoch timestamp to ISO8601:ish */
 }
 ?>
