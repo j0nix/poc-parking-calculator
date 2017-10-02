@@ -17,7 +17,7 @@ final class customerDb
         }
 
         private function validCustomer($id) {
-		if(!preg_match('/^[A-Z]{3}[0-9]{3}$/',strtoupper($id))) throw new UnexpectedValueException(sprintf(__CLASS__."::".__FUNCTION__."::%s is not a valid customer id",$id));
+		if(!preg_match('/^[A-Z]{3}[0-9]{3}$/',$id)) throw new UnexpectedValueException(sprintf(__CLASS__."::".__FUNCTION__."::%s is not a valid customer id",$id));
         }
 }
 ?>
