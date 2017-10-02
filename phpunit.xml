@@ -1,4 +1,4 @@
-<phpunit colors="true" bootstrap="classes/autoload.php">
+<phpunit bootstrap="classes/autoload.php">
   <testsuites>
     <testsuite name="poc-parking-calculator">
       <directory>tests</directory>
