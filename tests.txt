@@ -1,0 +1,12 @@
+customerDb
+ [x] Invalid customer
+ [x] Valid customer
+
+unixTime
+ [x] Human 2 unix
+ [x] Unix 2 human
+
+zoneDatabase
+ [x] Invalid zone
+ [x] Valid zone
+
