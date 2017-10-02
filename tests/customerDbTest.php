@@ -9,16 +9,14 @@ class customerDbTest extends TestCase {
 	{
 
 		$failString = 'abc123';
+		$fail = false;
 
 		try {
 			$customer = customerDb::fetchCustomer($failString);
-
 		} catch (Exception $e) {
-
-			$customer = array("ERROR" => $e->getMessage());
-
+			$fail = true;
 		}
 
-        	$this->assertArrayHasKey("ERROR", $customer);
+        	$this->assertTrue($fail);
     	}
 }
