@@ -1,7 +1,7 @@
-<phpunit bootstrap="classes/autoload.php">
+<phpunit bootstrap="classes/autoloadForTests.php">
   <testsuites>
     <testsuite name="poc-parking-calculator">
-      <directory>tests</directory>
+	    <directory>tests</directory>
     </testsuite>
   </testsuites>
 </phpunit>
